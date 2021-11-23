@@ -1,0 +1,377 @@
+:root {
+  --color__01: #0E5CAD;
+  --color__02: #79F1A4;
+  --color__03: yellow;
+  --color__darkgrey: #212121;
+  --color__white: #fff;
+  --color__grd01: linear-gradient(135deg, var(--color__02) 10%, var(--color__01) 100%);
+  --color__grd02: linear-gradient(90deg, blue, darkblue, red, purple);
+  --fw__p01: 400;
+  --fw__h01: 500;
+  --fw__butn01: 600;
+  --fw__butn02: 700;
+  --fs__h1: 33px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  color: var(--color__darkgrey);
+  font-family: "Nunito", sans-serif;
+  font-weight: var(--fw__p01);
+  font-size: 17px;
+  line-height: 1.3;
+  margin: 0 auto;
+  max-width: 90%;
+}
+
+/* replaced by global max-widt: 80%
+main {
+  margin: 20px;
+}
+*/
+h1 {
+  font-size: var(--fs__h1);
+  font-weight: var(--fw__h01);
+  line-height: 1.2;
+}
+
+h2 {
+  font-size: 27px;
+  font-weight: var(--fw__h01);
+  line-height: 1.2;
+}
+
+h3 {
+  font-size: 19px;
+  font-weight: var(--fw__h01);
+  line-height: 0.8;
+}
+
+h4 {
+  font-size: 15px;
+  font-weight: var(--fw__h01);
+  line-height: 0.6;
+}
+
+p {
+  line-height: 1.6em;
+}
+
+form {
+  line-height: 2.5em;
+}
+
+a, a:visited {
+  color: var(--color__darkgrey);
+  text-underline-offset: 0.2em;
+  transition-duration: 0.3s;
+  transition-property: color, text-decoration;
+}
+
+a:hover, a:focus {
+  color: var(--color__01);
+  text-decoration-color: var(--color__01);
+}
+
+/*
+a:active {
+  color: var(--color__01);
+  text-decoration: underline;
+  text-decoration-style: wavy;
+  text-decoration-color: var(--color__01);
+}
+*/
+button,
+#button,
+input[type="submit"] {
+  border: none;
+  display: inline-block;
+  font-family: inherit;
+  font-weight: var(--fw__butn01);
+  text-transform: capitalize;
+  background-color: var(--color__01);
+  color: var(--color__white);
+  text-decoration: none;
+  padding: 9px;
+  border-radius: 0;
+  transition: opacity 0.3s;
+}
+
+button:hover, button:focus,
+#button:hover, #button:focus, input[type="submit"]:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+#button__secondary {
+  border: none;
+  display: inline-block;
+  font-family: inherit;
+  font-weight: var(--fw__butn02);
+  text-transform: capitalize;
+  background-color: var(--color__02);
+  color: var(--color__darkgrey);
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 0;
+  transition: opacity 0.3s;
+}
+
+#button__secondary:hover, #button__secondary:focus {
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+input, texture, select {
+  font-family: inherit;
+}
+
+.navigation-list {
+  text-transform: capitalize;
+  list-style-type: none;
+}
+
+.navigation-list li {
+  /*purely inline would also work here? */
+  display: inline-block;
+  margin-left: 15px;
+  margin-top: 1px;
+}
+
+.navigation-list__item {
+  text-decoration: none;
+}
+
+nav .navigation-list__item--active {
+  color: var(--color__01);
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+}
+
+.page-header {
+  display: flex;
+  padding: 40px 0 12px;
+}
+
+.page-header_logo {
+  width: 200px;
+}
+
+.page-header__item {
+  flex: 0 1 200px;
+}
+
+.page-header__item:last-child {
+  flex-grow: 1;
+  text-align: right;
+}
+
+.profile {
+  min-height: 600px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  background-image: var(--color__grd01);
+  /* background vs background-image vs color*/
+  background-size: 400% 400%;
+  animation: gradient 32s linear infinite;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.profile__item {
+  flex: 1 1 350px;
+  padding: 25px;
+}
+
+.profile__item:first-child {
+  text-align: right;
+}
+
+img.profile__portrait {
+  border-radius: 50%;
+  width: 110%;
+  max-width: 300px;
+  margin-right: 12px;
+}
+
+/* start work-grid fallback */
+.work-grid__item {
+  display: inline-block;
+  width: 33%;
+}
+
+/* end work-grid fallback */
+@supports (display: grid) {
+  .work-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 20px;
+    margin: 0;
+  }
+
+  .work-grid__item {
+    /* local CSS variable overriding the global one in the root: */
+    --color__02: rgba(41, 210, 149, 0.9);
+    /* could also be a new local CSS variable without overriding the global ($green) one in the root:
+    --color__02b: rgb(145, 8, 144); */
+    background: var(--color__02);
+    width: auto;
+    min-height: auto;
+    margin: 0;
+    padding: 20px;
+  }
+
+  .work-grid__item:last-child {
+    /*is 4 correct in grid-column? */
+    grid-column: 2 / 4;
+    grid-row: 2 / 2;
+  }
+}
+
+@media all and (max-width: 777px) {
+  .work-grid {
+    grid-gap: 15px;
+  }
+
+  .work-grid__item:last-child {
+    grid-column: auto / auto;
+    grid-row: auto / auto;
+  }
+}
+
+@media all and (min-width: 500px) and (max-width: 777px) {
+  .profile__item:first-child {
+    text-align: center;
+  }
+
+  .profile__item {
+    text-align: center;
+  }
+
+  .work-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  h1 {
+    --fs__h1: 31px;
+  }
+}
+
+@media all and (max-width: 500px) {
+  .page-header {
+    padding: 18px 0 10px;
+  }
+
+  .profile__item:first-child {
+    text-align: center;
+  }
+
+  .profile__item {
+    text-align: center;
+  }
+
+  .work-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .page-header_logo {
+    max-width: 150%;
+  }
+
+  .navigation-list {
+    /*purely inline would also work here? */
+    font-size: 15px;
+    line-height: 23px;
+  }
+
+  h1 {
+    --fs__h1: 28px;
+  }
+}
+
+.about-me {
+  text-align: center;
+  margin: 0 auto;
+  max-width: 750px;
+}
+
+.contact {
+  text-align: center;
+  margin: 0 auto;
+  max-width: 750px;
+}
+
+caption, section.qualifications {
+  text-align: left;
+}
+
+.page-footer {
+  clear: both;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.socials-footer {
+  background-image: var(--color__grd02);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@keyframes color-change {
+  0% {
+    fill: var(--color__01);
+  }
+
+  50% {
+    fill: var(--color__02);
+  }
+
+  100% {
+    fill: var(--color__03);
+  }
+}
+
+.sun {
+  animation: 5s color-change infinite alternate linear;
+}
+
+@keyframes cloud-moves {
+  from {
+    transform: translate(0, 50px);
+  }
+
+  to {
+    transform: translate(720px, 50px);
+  }
+}
+
+.cloud-back {
+  animation-duration: 23s;
+  animation-name: cloud-moves;
+  animation-iteration-count: infinite;
+  animation-direction: reverse;
+  animation-timing-function: linear;
+}
+
+/* Obsolete Colors
+--color__1: #117c52;
+--color__2: #211752;
+*/
