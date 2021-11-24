@@ -1,6 +1,6 @@
 :root {
-  --color__01: #0E5CAD;
-  --color__02: #79F1A4;
+  --color__01: #0e5cad;
+  --color__02: #79f1a4;
   --color__03: yellow;
   --color__darkgrey: #212121;
   --color__white: #fff;
@@ -64,14 +64,16 @@ form {
   line-height: 2.5em;
 }
 
-a, a:visited {
+a,
+a:visited {
   color: var(--color__darkgrey);
   text-underline-offset: 0.2em;
   transition-duration: 0.3s;
   transition-property: color, text-decoration;
 }
 
-a:hover, a:focus {
+a:hover,
+a:focus {
   color: var(--color__01);
   text-decoration-color: var(--color__01);
 }
@@ -100,8 +102,11 @@ input[type="submit"] {
   transition: opacity 0.3s;
 }
 
-button:hover, button:focus,
-#button:hover, #button:focus, input[type="submit"]:hover {
+button:hover,
+button:focus,
+#button:hover,
+#button:focus,
+input[type="submit"]:hover {
   cursor: pointer;
   opacity: 0.8;
 }
@@ -120,12 +125,16 @@ button:hover, button:focus,
   transition: opacity 0.3s;
 }
 
-#button__secondary:hover, #button__secondary:focus {
+#button__secondary:hover,
+#button__secondary:focus {
   cursor: pointer;
   opacity: 0.8;
 }
 
-input, texture, select {
+/* Changed "texture" type selector of the following declaration block to "textarea" which is a valid type selector for HTML forms while "texture" is not. "texture" was taken from a code example of Exercise 1.5 but seems to be a mistake. */
+input,
+textarea,
+select {
   font-family: inherit;
 }
 
@@ -135,7 +144,7 @@ input, texture, select {
 }
 
 .navigation-list li {
-  /*purely inline would also work here? */
+  /* purely inline would also work here? */
   display: inline-block;
   margin-left: 15px;
   margin-top: 1px;
@@ -176,7 +185,8 @@ nav .navigation-list__item--active {
   justify-content: center;
   align-items: center;
   background-image: var(--color__grd01);
-  /* background vs background-image vs color*/
+
+  /* background vs background-image vs color */
   background-size: 400% 400%;
   animation: gradient 32s linear infinite;
 }
@@ -229,6 +239,7 @@ img.profile__portrait {
   .work-grid__item {
     /* local CSS variable overriding the global one in the root: */
     --color__02: rgba(41, 210, 149, 0.9);
+
     /* could also be a new local CSS variable without overriding the global ($green) one in the root:
     --color__02b: rgb(145, 8, 144); */
     background: var(--color__02);
@@ -239,7 +250,7 @@ img.profile__portrait {
   }
 
   .work-grid__item:last-child {
-    /*is 4 correct in grid-column? */
+    /* is 4 correct in grid-column? */
     grid-column: 2 / 4;
     grid-row: 2 / 2;
   }
@@ -296,7 +307,7 @@ img.profile__portrait {
   }
 
   .navigation-list {
-    /*purely inline would also work here? */
+    /* purely inline would also work here? */
     font-size: 15px;
     line-height: 23px;
   }
@@ -318,7 +329,8 @@ img.profile__portrait {
   max-width: 750px;
 }
 
-caption, section.qualifications {
+caption,
+section.qualifications {
   text-align: left;
 }
 
