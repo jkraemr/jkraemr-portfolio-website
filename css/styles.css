@@ -343,8 +343,6 @@ section.qualifications {
 
 .socials-footer {
   background-image: var(--color__grd02);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
 }
 
 @keyframes color-change {
