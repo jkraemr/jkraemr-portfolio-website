@@ -78,14 +78,13 @@ a:focus {
   text-decoration-color: var(--color__01);
 }
 
-/*
 a:active {
   color: var(--color__01);
   text-decoration: underline;
   text-decoration-style: wavy;
   text-decoration-color: var(--color__01);
 }
-*/
+
 button,
 #button,
 input[type="submit"] {
@@ -335,6 +334,8 @@ section.qualifications {
 
 .socials-footer {
   background-image: var(--color__grd02);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 @keyframes color-change {

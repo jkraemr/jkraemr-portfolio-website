@@ -91,32 +91,33 @@ a:visited {
 }
 
 a:hover {
-  color: #0E5CAD;
-  -webkit-text-decoration-color: #0E5CAD;
-  text-decoration-color: #0E5CAD;
+  color: #0e5cad;
+  -webkit-text-decoration-color: #0e5cad;
+  text-decoration-color: #0e5cad;
 }
 
 a:focus {
-  color: #0E5CAD;
-  -webkit-text-decoration-color: #0E5CAD;
-  text-decoration-color: #0E5CAD;
+  color: #0e5cad;
+  -webkit-text-decoration-color: #0e5cad;
+  text-decoration-color: #0e5cad;
 }
 
-/*
 a:active {
-  color: var(--color__01);
+  color: #0e5cad;
   text-decoration: underline;
+  -webkit-text-decoration-style: wavy;
   text-decoration-style: wavy;
-  text-decoration-color: var(--color__01);
+  -webkit-text-decoration-color: #0e5cad;
+  text-decoration-color: #0e5cad;
 }
-*/
+
 button {
   border: none;
   display: inline-block;
   font-family: inherit;
   font-weight: 600;
   text-transform: capitalize;
-  background-color: #0E5CAD;
+  background-color: #0e5cad;
   color: #fff;
   text-decoration: none;
   padding: 9px;
@@ -131,7 +132,7 @@ button {
   font-family: inherit;
   font-weight: 600;
   text-transform: capitalize;
-  background-color: #0E5CAD;
+  background-color: #0e5cad;
   color: #fff;
   text-decoration: none;
   padding: 9px;
@@ -146,7 +147,7 @@ input[type="submit"] {
   font-family: inherit;
   font-weight: 600;
   text-transform: capitalize;
-  background-color: #0E5CAD;
+  background-color: #0e5cad;
   color: #fff;
   text-decoration: none;
   padding: 9px;
@@ -155,8 +156,11 @@ input[type="submit"] {
   transition: opacity 0.3s;
 }
 
-button:hover, button:focus,
-#button:hover, #button:focus, input[type="submit"]:hover {
+button:hover,
+button:focus,
+#button:hover,
+#button:focus,
+input[type="submit"]:hover {
   cursor: pointer;
   opacity: 0.8;
 }
@@ -167,7 +171,7 @@ button:hover, button:focus,
   font-family: inherit;
   font-weight: 700;
   text-transform: capitalize;
-  background-color: #79F1A4;
+  background-color: #79f1a4;
   color: #212121;
   text-decoration: none;
   padding: 10px;
@@ -176,12 +180,16 @@ button:hover, button:focus,
   transition: opacity 0.3s;
 }
 
-#button__secondary:hover, #button__secondary:focus {
+#button__secondary:hover,
+#button__secondary:focus {
   cursor: pointer;
   opacity: 0.8;
 }
 
-input, texture, select {
+/* Changed "texture" type selector of the following declaration block to "textarea" which is a valid type selector for HTML forms while "texture" is not. "texture" was taken from a code example of Exercise 1.5 but seems to be a mistake. */
+input,
+textarea,
+select {
   font-family: inherit;
 }
 
@@ -191,7 +199,7 @@ input, texture, select {
 }
 
 .navigation-list li {
-  /*purely inline would also work here? */
+  /* purely inline would also work here? */
   display: inline-block;
   margin-left: 15px;
   margin-top: 1px;
@@ -202,7 +210,7 @@ input, texture, select {
 }
 
 nav .navigation-list__item--active {
-  color: #0E5CAD;
+  color: #0e5cad;
   text-decoration: underline;
   text-decoration-thickness: 2px;
 }
@@ -244,8 +252,9 @@ nav .navigation-list__item--active {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background-image: linear-gradient(135deg, #79F1A4 10%, #0E5CAD 100%);
-  /* background vs background-image vs color*/
+  background-image: linear-gradient(135deg, #79f1a4 10%, #0e5cad 100%);
+
+  /* background vs background-image vs color */
   background-size: 400% 400%;
   -webkit-animation: gradient 32s linear infinite;
   animation: gradient 32s linear infinite;
@@ -316,6 +325,7 @@ img.profile__portrait {
 
   .work-grid__item {
     /* local CSS variable overriding the global one in the root: */
+
     /* could also be a new local CSS variable without overriding the global ($green) one in the root:
     --color__02b: rgb(145, 8, 144); */
     background: rgba(41, 210, 149, 0.9);
@@ -332,7 +342,7 @@ img.profile__portrait {
   }
 
   .work-grid__item:last-child {
-    /*is 4 correct in grid-column? */
+    /* is 4 correct in grid-column? */
     -ms-grid-column: 2;
     -ms-grid-column-span: 2;
     grid-column: 2 / 4;
@@ -342,6 +352,14 @@ img.profile__portrait {
 }
 
 @media all and (max-width: 777px) {
+  .profile__item:first-child {
+    text-align: center;
+  }
+
+  .profile__item {
+    text-align: center;
+  }
+
   .work-grid {
     grid-gap: 15px;
   }
@@ -353,14 +371,6 @@ img.profile__portrait {
 }
 
 @media all and (min-width: 500px) and (max-width: 777px) {
-  .profile__item:first-child {
-    text-align: center;
-  }
-
-  .profile__item {
-    text-align: center;
-  }
-
   .work-grid {
     -ms-grid-columns: 1fr 15px 1fr;
     grid-template-columns: 1fr 1fr;
@@ -370,14 +380,6 @@ img.profile__portrait {
 @media all and (max-width: 500px) {
   .page-header {
     padding: 18px 0 10px;
-  }
-
-  .profile__item:first-child {
-    text-align: center;
-  }
-
-  .profile__item {
-    text-align: center;
   }
 
   .work-grid {
@@ -390,7 +392,7 @@ img.profile__portrait {
   }
 
   .navigation-list {
-    /*purely inline would also work here? */
+    /* purely inline would also work here? */
     font-size: 15px;
     line-height: 23px;
   }
@@ -408,7 +410,8 @@ img.profile__portrait {
   max-width: 750px;
 }
 
-caption, section.qualifications {
+caption,
+section.qualifications {
   text-align: left;
 }
 
@@ -433,11 +436,11 @@ caption, section.qualifications {
 
 @-webkit-keyframes color-change {
   0% {
-    fill: #0E5CAD;
+    fill: #0e5cad;
   }
 
   50% {
-    fill: #79F1A4;
+    fill: #79f1a4;
   }
 
   100% {
@@ -447,11 +450,11 @@ caption, section.qualifications {
 
 @keyframes color-change {
   0% {
-    fill: #0E5CAD;
+    fill: #0e5cad;
   }
 
   50% {
-    fill: #79F1A4;
+    fill: #79f1a4;
   }
 
   100% {
