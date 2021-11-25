@@ -257,6 +257,14 @@ img.profile__portrait {
 }
 
 @media all and (max-width: 777px) {
+  .profile__item:first-child {
+    text-align: center;
+  }
+
+  .profile__item {
+    text-align: center;
+  }
+
   .work-grid {
     grid-gap: 15px;
   }
@@ -268,14 +276,6 @@ img.profile__portrait {
 }
 
 @media all and (min-width: 500px) and (max-width: 777px) {
-  .profile__item:first-child {
-    text-align: center;
-  }
-
-  .profile__item {
-    text-align: center;
-  }
-
   .work-grid {
     grid-template-columns: 1fr 1fr;
   }
@@ -288,14 +288,6 @@ img.profile__portrait {
 @media all and (max-width: 500px) {
   .page-header {
     padding: 18px 0 10px;
-  }
-
-  .profile__item:first-child {
-    text-align: center;
-  }
-
-  .profile__item {
-    text-align: center;
   }
 
   .work-grid {
