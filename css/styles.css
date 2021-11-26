@@ -75,7 +75,6 @@ a:visited {
 a:hover,
 a:focus {
   color: var(--color__01);
-  text-decoration-color: var(--color__01);
 }
 
 a:active {

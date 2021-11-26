@@ -92,14 +92,10 @@ a:visited {
 
 a:hover {
   color: #0e5cad;
-  -webkit-text-decoration-color: #0e5cad;
-  text-decoration-color: #0e5cad;
 }
 
 a:focus {
   color: #0e5cad;
-  -webkit-text-decoration-color: #0e5cad;
-  text-decoration-color: #0e5cad;
 }
 
 a:active {
