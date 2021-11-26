@@ -77,12 +77,14 @@ a:focus {
   color: var(--color__01);
 }
 
+/*
 a:active {
   color: var(--color__01);
   text-decoration: underline;
   text-decoration-style: wavy;
   text-decoration-color: var(--color__01);
 }
+*/
 
 button,
 #button,
