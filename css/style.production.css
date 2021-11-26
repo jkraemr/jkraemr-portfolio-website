@@ -366,6 +366,10 @@ img.profile__portrait {
 }
 
 @media all and (min-width: 500px) and (max-width: 777px) {
+  img.profile__portrait {
+    margin: 65px 0 0;
+  }
+
   .work-grid {
     -ms-grid-columns: 1fr 15px 1fr;
     grid-template-columns: 1fr 1fr;
@@ -373,6 +377,11 @@ img.profile__portrait {
 }
 
 @media all and (max-width: 500px) {
+  img.profile__portrait {
+    width: 100%;
+    margin: 55px 0 0;
+  }
+
   .page-header {
     padding: 18px 0 10px;
   }
