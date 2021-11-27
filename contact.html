@@ -38,41 +38,62 @@
 
   <main>
 
-    <!--
-    <img src="./img/adam-solomon-WHUDOzd5IYU-unsplash.jpg" width="220" alt="Speaking bubble saying 'Hello'" />
-     <figcaption>Photo credits: <a href="https://unsplash.com/photos/WHUDOzd5IYU" target="_blank">Unsplash</a></figcaption> -->
-    <!-- Is an article or section element needed here to wrap h1 and p ? -->
-    <div class="contact">
-      <h1>Get in touch</h1>
-      <p>Please fill out the contact form below,<br> give me a call via <a href="tel:+4912358132134">Phone</a> or <a href="skype:johannes.kraemer.">Skype</a>,<br> or just <a
-          href="mailto:me@myjunk.mail?cc=cc@copymail.org&bcc=bcc@abc.xy&?subject=My%20subject&body=Hello%20Johannes%20aka%20John%20Doe%2C%0D%0A%0D%0AHere%20goes%20my%20email.%0D%0A%0D%0AKind%20regards%2C%0D%0AJane%20Doe">Send me an Email</a>.<br>
-        I look forward to hear from you!</p>
-    </div>
+    <section class="contact-main">
+      <h1>Contact</h1>
 
-    <section class="contact">
-      <form action="#" method="POST">
-        <h2>Contact form</h2>
-        <p>Please fill out all fields marked as required (*).</p>
-        <label for="first-name">First name</label>
-        <input type="text" id="first-name" name="first-name" value=""><br>
-        <label for="last-name">Last name</label>
-        <input type="text" id="last-name" name="last-name" value=""><br>
-        <label for="email">Email*</label>
-        <input type="email" id="email" name="email" value="" required><br>
-        <label for="tel">Phone</label>
-        <input type="tel" id="tel" name="tel" value=""><br>
-        <label for="message">Your message* (maximum 250 characters)</label><br>
-        <textarea id="message" name="message" rows="8" cols="40" maxlength="250" placeholder="Please type here ..." required></textarea><br>
-        <input type="submit" value="Send">
-      </form>
+      <div class="contact-grid">
+        <div class="contact-grid__item">
+          <!-- <img class="contact-img" src="./img/adam-solomon-WHUDOzd5IYU-unsplash.jpg" width="220" alt="Speaking bubble saying 'Hello'" />
+           <figcaption>Photo credits: <a href="https://unsplash.com/photos/WHUDOzd5IYU" target="_blank">Unsplash</a></figcaption> -->
+
+           <h2>Let's talk!</h2>
+
+          <p>Feel free to get in touch via the contact form, <br>give me a call via <a href="tel:+4912358132134">Phone</a> or <a href="skype:johannes.kraemer.">Skype</a>, <br>or just <a
+              href="mailto:me@myjunk.mail?cc=cc@copymail.org&bcc=bcc@abc.xy&?subject=My%20subject&body=Hello%20Johannes%20aka%20John%20Doe%2C%0D%0A%0D%0AHere%20goes%20my%20email.%0D%0A%0D%0AKind%20regards%2C%0D%0AJane%20Doe">send me an Email</a>.</p>
+
+          <div class="contact-x">
+            <p>Phone: <a href="tel:+4912358132134">Call +49-123-58132134</a></p>
+            <p>Skype: <a href="skype:johannes.kraemer.">johannes.kraemer.</a></p>
+            <p>E-Mail: <a
+                href="mailto:me@myjunk.mail?cc=cc@copymail.org&bcc=bcc@abc.xy&?subject=My%20subject&body=Hello%20Johannes%20aka%20John%20Doe%2C%0D%0A%0D%0AHere%20Goes%20my%20email.%0D%0A%0D%0AKind%20regards%2C%0D%0AJane%20Doe">me@myjunk.mail</a>
+            </p>
+            <p>I look forward to hear from you.</p>
+          </div>
+        </div>
+        <div class="contact-grid__item">
+          <form action="#" method="POST">
+            <h2>Contact form</h2>
+            <label for="first-name">First name</label>
+            <input type="text" id="first-name" name="first-name" value=""><br>
+            <label for="last-name">Last name</label>
+            <input type="text" id="last-name" name="last-name" value=""><br>
+            <label for="email">Email*</label>
+            <input type="email" id="email" name="email" value="" required><br>
+            <label for="tel">Phone</label>
+            <input type="tel" id="tel" name="tel" value=""><br>
+            <label for="message">Your message<span style="font-size:small;"> (maximum 250 characters)</span>*</label>
+            <textarea id="message" name="message" rows="8" cols="40" maxlength="250" placeholder="Please type here ..." required></textarea><br>
+            <input type="submit" value="Send" class="contact-form__submit-button">
+            <p style="font-size:small;">(*) Please fill out all fields marked as required.</p>
+          </form>
+        </div>
+      </div>
+
+      <div class="contact-flex">
+
+        <div class="contact-flex__item">
+
+
+        </div>
+
+        <div class="contact-flex__item">
+
+        </div>
+
+      </div>
+
     </section>
 
-    <div class="contact">
-      <p>Phone: <a href="tel:+4912358132134">Call +49-123-58132134</a></p>
-      <p>Skype: <a href="skype:johannes.kraemer.">johannes.kraemer.</a></p>
-      <p>E-Mail: <a href="mailto:me@myjunk.mail?cc=cc@copymail.org&bcc=bcc@abc.xy&?subject=My%20subject&body=Hello%20Johannes%20aka%20John%20Doe%2C%0D%0A%0D%0AHere%20Goes%20my%20email.%0D%0A%0D%0AKind%20regards%2C%0D%0AJane%20Doe">me@myjunk.mail</a>
-      </p>
-    </div>
   </main>
 
   <footer class="page-footer">
