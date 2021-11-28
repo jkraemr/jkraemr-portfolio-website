@@ -6,6 +6,7 @@
   --color__white: #fff;
   --color__grd01: linear-gradient(135deg, var(--color__02) 10%, var(--color__01) 100%);
   --color__grd02: linear-gradient(90deg, blue, darkblue, red, purple);
+  --bg-color__01: rgba(41, 210, 149, 0.9);
   --fw__p01: 400;
   --fw__h01: 500;
   --fw__butn01: 600;
@@ -61,7 +62,8 @@ p {
 }
 
 form {
-  line-height: 2.5em;
+  line-height: 1.8em;
+  display: grid;
 }
 
 a,
@@ -132,9 +134,15 @@ input[type="submit"]:hover {
 
 /* Changed "texture" type selector of the following declaration block to "textarea" which is a valid type selector for HTML forms while "texture" is not. "texture" was taken from a code example of Exercise 1.5 but seems to be a mistake. */
 input,
-textarea,
 select {
   font-family: inherit;
+  width: 50%;
+}
+
+textarea {
+  padding: 8px;
+  font-family: inherit;
+  width: 90%;
 }
 
 .navigation-list {
@@ -220,6 +228,11 @@ img.profile__portrait {
   margin-right: 12px;
 }
 
+/*
+.work-main {
+}
+*/
+
 /* start work-grid fallback */
 .work-grid__item {
   display: inline-block;
@@ -255,6 +268,90 @@ img.profile__portrait {
   }
 }
 
+/*
+.about-main {
+}
+*/
+.about-flex {
+  background-color: var(--bg-color__01);
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.about-flex__item:first-child {
+  flex: 1 1 150px;
+  padding: 25px;
+}
+
+.about-flex__item {
+  flex: 1 1 350px;
+  padding: 25px;
+}
+
+.about-qualifications {
+  max-width: 10%;
+}
+
+.berlin-illustration {
+  max-width: 95%;
+}
+
+.cca-logo-button {
+  width: 170px;
+  background-color: var(--color__white);
+  border-radius: 15px;
+  border: 2px solid var(--color__01);
+}
+
+.contact-main {
+  text-align: left;
+}
+
+.contact-form__submit-button {
+  width: 50%;
+}
+
+/* start contact-grid fallback */
+.contact-grid__item {
+  display: inline-block;
+  width: 50%;
+}
+
+/* end contact-grid fallback */
+@supports (display: grid) {
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+    margin: 0;
+  }
+
+  .contact-grid__item {
+    /* local CSS variable overriding the global one in the root: */
+    --color__02: rgba(41, 210, 149, 0.9);
+
+    /* could also be a new local CSS variable without overriding the global ($green) one in the root:
+    --color__02b: rgb(145, 8, 144); */
+    background: var(--color__02);
+    width: auto;
+    min-height: auto;
+    margin: 0;
+    padding: 20px;
+  }
+}
+
+/*
+.contact-flex {
+  background-color: var(--bg-color__01);
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.contact-flex__item {
+  flex: 1 1 250px;
+  padding: 25px;
+}
+*/
 @media all and (max-width: 777px) {
   .profile__item:first-child {
     text-align: center;
@@ -271,6 +368,10 @@ img.profile__portrait {
   .work-grid__item:last-child {
     grid-column: auto / auto;
     grid-row: auto / auto;
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr;
   }
 }
 
@@ -317,18 +418,6 @@ img.profile__portrait {
   }
 }
 
-.about-me {
-  text-align: center;
-  margin: 0 auto;
-  max-width: 750px;
-}
-
-.contact {
-  text-align: center;
-  margin: 0 auto;
-  max-width: 750px;
-}
-
 caption,
 section.qualifications {
   text-align: left;
@@ -371,16 +460,16 @@ section.qualifications {
   }
 
   to {
-    transform: translate(720px, 50px);
+    transform: translate(620px, 50px);
   }
 }
 
 .cloud-back {
-  animation-duration: 23s;
+  animation-duration: 44s;
   animation-name: cloud-moves;
   animation-iteration-count: infinite;
-  animation-direction: reverse;
-  animation-timing-function: linear;
+  animation-direction: alternate-reverse;
+  animation-timing-function: ease-in-out;
 }
 
 /* Obsolete Colors
