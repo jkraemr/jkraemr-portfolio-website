@@ -246,6 +246,7 @@ img.profile__portrait {
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 20px;
     margin: 0;
+    text-align: center;
   }
 
   .work-grid__item {
@@ -259,6 +260,10 @@ img.profile__portrait {
     min-height: auto;
     margin: 0;
     padding: 20px;
+  }
+
+  .work-grid__image {
+    border-radius: 50%;
   }
 
   .work-grid__item:last-child {
