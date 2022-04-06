@@ -20,3 +20,7 @@ Responsive website using HTML and CSS showcasing the projects built throughout t
 * The website has been tested to be compatible with / works on the latest Chrome, Firefox, Safari, Edge, and Opera browser versions as well as on IE11.
 * The website works on all screen sizes (including mobile and tablet) between 1920px and 320px in width.
 * The website works with keyboard, mouse, and touch inputs.
+
+## Acknowledgements
+
+This project has been built as part of the CareerFoundry Full-Stack Web Development Program: https://careerfoundry.com/en/courses/become-a-web-developer/
