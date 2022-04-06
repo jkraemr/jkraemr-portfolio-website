@@ -23,4 +23,4 @@ Responsive website using HTML and CSS showcasing the projects built throughout t
 
 ## Acknowledgements
 
-This project has been built as part of the CareerFoundry Full-Stack Web Development Program: https://careerfoundry.com/en/courses/become-a-web-developer/
+This project has been built as part of the mentored CareerFoundry Full-Stack Web Development Program: https://careerfoundry.com/en/courses/become-a-web-developer/
