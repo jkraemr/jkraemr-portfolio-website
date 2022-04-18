@@ -48,7 +48,7 @@ h2 {
 h3 {
   font-size: 19px;
   font-weight: var(--fw__h01);
-  line-height: 0.8;
+  line-height: 1.2;
 }
 
 h4 {
@@ -264,6 +264,7 @@ img.profile__portrait {
 
   .work-grid__image {
     border-radius: 50%;
+    margin: 0.5em;
   }
 
   .work-grid__item:last-child {
