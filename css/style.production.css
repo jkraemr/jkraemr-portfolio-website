@@ -405,9 +405,16 @@ img.profile__portrait {
   padding: 25px;
 }
 
-.about-qualifications {
-  max-width: 10%;
+.ul-qualifications {
+  font-size: 0.9em;
+  -webkit-padding-start: 1em;
+  padding-inline-start: 1em;
+  line-height: 1.6;
 }
+
+/* .about-qualifications {
+  max-width: 10%;
+} */
 
 .berlin-illustration {
   max-width: 95%;
