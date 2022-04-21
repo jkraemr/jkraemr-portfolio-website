@@ -440,6 +440,7 @@ section.qualifications {
   display: flex;
   flex-direction: column;
   text-align: center;
+  margin: 0 0 1.2em;
 }
 
 .socials-footer {
